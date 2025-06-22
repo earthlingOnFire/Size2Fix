@@ -221,7 +221,7 @@ static class Patches {
     if (cooker.unusable) {
       if (cooker.timeSinceLastError > 2f) {
         cooker.timeSinceLastError = 0f;
-        HudMessageReceiver.Instance.SendHudMessage("Too small for this fish.\n:^(");
+        HudMessageReceiver.Instance.SendHudMessage("Too small for this fish. :^(");
       }
       return false;
     }
