@@ -215,20 +215,6 @@ static class Patches {
     if (!other.TryGetComponent<FishObjectReference>(out var inputFishRef)) {
       return false;
     }
-    
-    FishObject inputFish = inputFishRef.fishObject;
-
-    if (cooker.unusable) {
-      if (cooker.timeSinceLastError > 2f) {
-        cooker.timeSinceLastError = 0f;
-        HudMessageReceiver.Instance.SendHudMessage("Too small for this fish.\n:^");
-      }
-      return false;
-    }
-
-    if (inputFish == cooker.cookedFish || inputFish == cooker.failedFish) {
-      return false;
-    }
 
     _ = FishManager.Instance.recognizedFishes[cooker.cookedFish];
     GameObject outputFish = FishingRodWeapon.CreateFishPickup(
