@@ -16,7 +16,7 @@ namespace Size2Fix;
 public class Plugin : BaseUnityPlugin {
   public const string PLUGIN_GUID = "com.earthlingOnFire.Size2Fix";
   public const string PLUGIN_NAME = "Size 2 Fix";
-  public const string PLUGIN_VERSION = "1.0.0";
+  public const string PLUGIN_VERSION = "1.0.1";
 
   internal static ConfigEntry<bool> hasCaughtSize2;
   internal static ConfigEntry<int> probability;
